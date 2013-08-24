@@ -1,0 +1,17 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    role: common
+    dir: .
+  tasks:
+  - name: create directories for ansible files.
+    file: path={{ item }} state=directory
+    with_items:
+      - group_vars
+      - host_vars
+      - {{ dir }}/roles/{{ role }}/tasks
+      - {{ dir }}/roles/{{ role }}/handlers
+      - {{ dir }}/roles/{{ role }}/templates
+      - {{ dir }}/roles/{{ role }}/files
+      - {{ dir }}/roles/{{ role }}/vars
