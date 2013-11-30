@@ -10,8 +10,8 @@
     with_items:
       - group_vars
       - host_vars
-      - {{ dir }}/roles/{{ role }}/tasks
-      - {{ dir }}/roles/{{ role }}/handlers
-      - {{ dir }}/roles/{{ role }}/templates
-      - {{ dir }}/roles/{{ role }}/files
-      - {{ dir }}/roles/{{ role }}/vars
+      - '{{ dir }}/roles/{{ role }}/tasks'
+      - '{{ dir }}/roles/{{ role }}/handlers'
+      - '{{ dir }}/roles/{{ role }}/templates'
+      - '{{ dir }}/roles/{{ role }}/files'
+      - '{{ dir }}/roles/{{ role }}/vars'
